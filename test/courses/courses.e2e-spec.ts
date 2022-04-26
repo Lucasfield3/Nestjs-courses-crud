@@ -16,7 +16,7 @@ describe('Courses: /courses', () => {
           host: 'localhost',
           port: 5433,
           username: 'postgres',
-          password: '55813320kl',
+          password: String(process.env.DB_PASSWORD),
           database: 'testdb',
           autoLoadEntities: true,
           synchronize: true,
