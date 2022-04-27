@@ -3,7 +3,7 @@ module.exports = {
   host: 'db',
   port: 5432,
   username: 'postgres',
-  password:  String(process.env.DB_PASSWORD),
+  password:  '55813320kl',
   database: 'cursonestjs',
   entities: ['dist/**/*.entity.js'],
   migrations: ['dist/migrations/*.js'],
