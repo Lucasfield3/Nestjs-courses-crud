@@ -13,35 +13,35 @@ services:
       - db
 
   db:
-    build:  .docker/postgres
+    build: .docker/postgres
     container_name: cursonestjs-db
-    restart:  always
-    tty:  true
+    restart: always
+    tty: true
     ports:
       - "5432:5432"
     volumes:
       - .docker/dbdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=55813320kl
+      - POSTGRES_PASSWORD=password
       - POSTGRES_DB=cursonestjs
 
   dbtest:
-    build:  .docker/postgres
+    build: .docker/postgres
     container_name: cursonestjs-dbtest
-    restart:  always
-    tty:  true
+    restart: always
+    tty: true
     ports:
       - "5433:5432"
     volumes:
       - .docker/dbdatatest:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=55813320kl
+      - POSTGRES_PASSWORD=password
       - POSTGRES_DB=testdb
 
   pgadmin:
     image: dpage/pgadmin4
     container_name: cursonestjs-pgadmin
-    tty:  true
+    tty: true
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
       - PGADMIN_DEFAULT_PASSWORD=admin
